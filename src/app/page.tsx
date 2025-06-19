@@ -64,7 +64,7 @@ export default function Home() {
     <main className="p-8 bg-gray-100 min-h-screen">
       <h1 className="text-3xl font-bold mb-6">User Dashboard</h1>
 
-      {/* Add User Form */}
+     
       <form onSubmit={handleAddUser} className="mb-6 bg-white p-4 rounded shadow">
         <div className="flex flex-col sm:flex-row gap-4">
           <input
