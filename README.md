@@ -1,97 +1,114 @@
 🚀 Full-Stack User Dashboard (Next.js + Firebase + Docker)
 
-This project is a full-stack CRUD dashboard built with Next.js (frontend), Firebase Cloud Functions + Firestore (backend/database), and containerized using Docker.
+This repository contains a containerized full-stack user dashboard application built with Next.js for the frontend and Firebase Functions + Firestore for the backend. The application supports full CRUD operations and is designed to be portable via Docker.
+
+⸻
 
 📁 Project Structure
 
 fsd-dashboard/
-├── backend/                 # Firebase Cloud Functions
+├── backend/                     # Firebase Cloud Functions backend
 │   └── functions/src/index.ts
 │
-├── frontend/                # Next.js frontend app
+├── frontend/                    # Next.js frontend app
 │   ├── Dockerfile
 │   ├── .dockerignore
 │   ├── package.json
 │   └── src/app/page.tsx
 │
-├── README.md                # Project setup & usage
-└── docs/api-doc.md          # API endpoint documentation
+├── README.md                    # This file
+└── docs/api-doc.md              # API Documentation
 
 
 ⸻
 
-📦 Features
-	•	✅ Add User
-	•	✅ View Users
-	•	✅ Delete User
-	•	✅ Backend with Firebase Functions
-	•	✅ Cloud Firestore as database
-	•	✅ Frontend fully containerized using Docker
+🌟 Features
+	•	Add new users
+	•	View all users
+	•	Delete existing users
+	•	Firebase Firestore integration
+	•	Backend hosted on Firebase Cloud Functions
+	•	Frontend containerized with Docker
 
 ⸻
 
-🔧 How to Run Frontend using Docker
+🐳 Run Frontend Using Docker
 
-Step 1: Navigate to frontend folder
+1. Navigate to the frontend directory:
 
 cd frontend
 
-Step 2: Build Docker image
+2. Build Docker image:
 
 docker build -t fsd-dashboard-frontend .
 
-Step 3: Run Docker container
+3. Run the container:
 
 docker run -p 3000:3000 fsd-dashboard-frontend
 
-Step 4: Open in Browser
+4. Access in browser:
 
 http://localhost:3000
 
 
 ⸻
 
-🧪 Firebase Backend (Already Deployed)
-	•	GET /getUsers: Get all users
-	•	POST /addUser: Add a new user
-	•	DELETE /deleteUser: Delete a user by ID
+🔧 Firebase Backend (Already Deployed)
 
-📍 See docs/api-doc.md for full API details
+The backend consists of three Cloud Functions:
 
-⸻
+Function	Method	Endpoint URL
+getUsers	GET	https://us-central1-YOUR_PROJECT.cloudfunctions.net/getUsers
+addUser	POST	https://us-central1-YOUR_PROJECT.cloudfunctions.net/addUser
+deleteUser	DELETE	https://us-central1-YOUR_PROJECT.cloudfunctions.net/deleteUser
 
-⚙️ Tech Stack
-	•	Frontend: Next.js 15, TypeScript, Tailwind CSS
-	•	Backend: Firebase Cloud Functions
-	•	Database: Firebase Firestore
-	•	Containerization: Docker (Node Alpine)
+📄 See docs/api-doc.md for full API usage with request/response formats.
 
 ⸻
 
 🔁 CRUD Operations Demo
-	1.	Add user with name + email
-	2.	View all users
-	3.	Delete any user
+	•	Add User: Fill name and email and submit the form.
+	•	View Users: Automatically listed on load.
+	•	Delete User: Click delete button next to a user.
 
-✅ All updates reflected live via Firestore
+All changes are synced to Firebase Firestore in real-time.
+
+⸻
+
+📦 Tech Stack
+	•	Frontend: Next.js 15, TypeScript, Tailwind CSS
+	•	Backend: Firebase Cloud Functions (Node.js)
+	•	Database: Firebase Firestore
+	•	DevOps: Docker
+
+⸻
+
+📝 How to Clone and Run Locally
+
+git clone https://github.com/yourusername/fsd-dashboard.git
+cd fsd-dashboard/frontend
+npm install
+npm run dev
+
+Ensure your backend Firebase Functions are already deployed.
+
+⸻
+
+🎥 Video Demo Checklist (To Record)
+	1.	Run docker build and docker run commands
+	2.	Open browser on localhost:3000
+	3.	Demonstrate Add, View, Delete users
+	4.	Optionally show Firestore dashboard
 
 ⸻
 
 📄 License
 
-This project is for educational/demo purposes only.
-
-⸻
-
-📹 Video Demo (Optional)
-	•	Demonstrates:
-	•	Adding a user
-	•	Fetching user list
-	•	Deleting a user
-	•	Running app in Docker
+This project is provided for educational and demonstration purposes.
 
 ⸻
 
 🙌 Author
 
 Aniket Pawar
+GitHub Profile
